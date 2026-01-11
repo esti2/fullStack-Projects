@@ -1,0 +1,72 @@
+body {
+    margin: 60px;
+}
+
+.nav {
+    display: flex;
+    position: fixed;
+}
+
+.name {
+    color: rgb(36, 99, 235);
+}
+
+.menu {
+    display: flex;
+    position: fixed;
+}
+
+
+
+.full {
+    justify-content: center;
+    display: flex;
+    background-color: #ebf0f5;
+}
+
+button {
+    background-color: #2463eb;
+    color: white;
+    border-radius: 5px solid;
+}
+
+.full_col1 {
+    width: 50%;
+}
+
+
+/* .image {
+    width: 200px;
+    height: 200px;
+    background-color: lightblue;
+
+border-radius: 50%;
+
+display: flex;
+align-items: center;
+justify-content: center;
+}*/
+.About {
+    display: flex;
+}
+
+.project {
+    display: flex;
+    width: calc(100%/3);
+}
+
+.GetInTouch {
+    display: flex;
+}
+
+.Touch_col1 {
+    display: flex;
+    width: 60%;
+    flex-direction: column;
+}
+
+.Touch_col2 {
+    display: flex;
+    width: 40%;
+    flex-direction: column;
+}
