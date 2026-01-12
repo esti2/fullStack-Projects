@@ -196,41 +196,21 @@ a {
 }
 
 a.social {
-    display: inline-flex;
-    /* חשוב */
-    justify-content: center;
-    /* יישור אופקי */
-    align-items: center;
-    /* יישור אנכי */
-
-    width: 45px;
-    height: 45px;
-
-    background-color: #0d6efd;
-    /* כחול כמו בדוגמה */
-    border-radius: 50%;
-    text-decoration: none;
-}
-
-a.social img {
-    width: 22px;
-    /* גודל האייקון */
-    height: 22px;
-}
-
-/* a.social {
     display: inline-block;
-    background-color: #eee;
+    background-color: blue;
     border-radius: 50%;
     width: 25px;
     padding: 10px;
-} */
+}
 
-/* a.social svg {
+
+a.social svg {
     display: block;
     width: 100%;
     fill: white;
-} */
+}
+
+
 
 @media(max-width:600px) {
 
@@ -274,7 +254,6 @@ a.social img {
 
     .menu {
         display: none;
-        /* מוסתר כברירת מחדל */
         flex-direction: column;
         margin-top: 10px;
     }
