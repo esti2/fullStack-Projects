@@ -1,25 +1,45 @@
 body {
-    margin: 60px;
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
 }
 
 .nav {
     display: flex;
     position: fixed;
+    background-color: white;
+    width: 100%;
+    padding: 2rem;
 }
 
 .name {
+    font-weight: bold;
     color: rgb(36, 99, 235);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .menu {
     display: flex;
     position: fixed;
+    right: 60px;
+    width: 30%;
+    justify-content: space-between;
 }
 
-
-
 .full {
-    justify-content: center;
+    width: 100%;
     display: flex;
     background-color: #ebf0f5;
 }
@@ -27,46 +47,102 @@ body {
 button {
     background-color: #2463eb;
     color: white;
-    border-radius: 5px solid;
+    border-radius: 20px solid #2463eb;
+    margin: 10px 0;
+    padding: 8px;
 }
 
 .full_col1 {
     width: 50%;
+    padding: 8%;
+}
+
+.full_col2 {
+    width: 50%;
+    padding: 8%;
+}
+
+img {
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.About {
+    display: flex;
+    padding: 8%;
+    justify-content: space-between;
+}
+
+.About_col1 {
+    width: 55%;
+}
+
+.About_col2 {
+    display: flex;
+    width: 30%;
+    flex-direction: column;
 }
 
 
-/* .image {
-    width: 200px;
-    height: 200px;
-    background-color: lightblue;
+.per1b,
+.per2b,
+.per3b,
+.per4b,
+.per5b {
+    background-color: #2463eb;
+    height: 5px;
+    width: 100px;
+    border-radius: 20%;
+    top: 100px;
+}
 
-border-radius: 50%;
 
-display: flex;
-align-items: center;
-justify-content: center;
-}*/
-.About {
-    display: flex;
+.per1,
+.per2,
+.per3,
+.per4 {
+    background-color: #e2e8f0;
+    height: 5px;
+    width: 120px;
+    border-radius: 20%;
+    right: 20px;
+}
+
+.title_center {
+    text-align: center;
+}
+
+.MyProjects {
+    background-color: #f7fafc;
+    padding: 8%;
 }
 
 .project {
     display: flex;
+    height: 100px;
+}
+
+.project1,
+.project2,
+.project3 {
     width: calc(100%/3);
 }
 
 .GetInTouch {
     display: flex;
+    padding: 8%;
 }
 
 .Touch_col1 {
     display: flex;
     width: 60%;
     flex-direction: column;
+    padding: 8%;
 }
 
 .Touch_col2 {
     display: flex;
     width: 40%;
     flex-direction: column;
+    padding: 8%;
 }
