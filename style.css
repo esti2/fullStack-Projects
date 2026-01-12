@@ -1,3 +1,4 @@
+/* max-width: 1200px; */
 body {
     margin: 0;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -16,6 +17,28 @@ h3 {
     font-size: 1.5rem;
 }
 
+.hamburger {
+    display: none;
+    font-size: 30px;
+    position: fixed;
+    top: 15px;
+    right: 100px;
+    z-index: 1000;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.menu {
+    display: flex;
+    position: fixed;
+    right: 150px;
+    width: 30%;
+    justify-content: space-between;
+    gap: 15px;
+}
+
 .nav {
     display: flex;
     position: fixed;
@@ -28,14 +51,6 @@ h3 {
     font-weight: bold;
     color: rgb(36, 99, 235);
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
-.menu {
-    display: flex;
-    position: fixed;
-    right: 60px;
-    width: 30%;
-    justify-content: space-between;
 }
 
 a {
@@ -54,15 +69,11 @@ a {
     color: white;
     border-radius: 5px;
     border-color: #2463eb;
-    margin: 10px 0;
+    margin: 10px 10px;
     padding: 8px;
 }
 
-.full_col1 {
-    width: 50%;
-    padding: 8%;
-}
-
+.full_col1,
 .full_col2 {
     width: 50%;
     padding: 8%;
@@ -93,25 +104,20 @@ a {
     align-items: center
 }
 
-
-
 .descreptionProject {
     background-color: white;
 }
 
-
 .per1b,
 .per2b,
 .per3b,
-.per4b,
-.per5b {
+.per4b {
     background-color: #2463eb;
     height: 5px;
     width: 100px;
     border-radius: 20%;
     top: 100px;
 }
-
 
 .per1,
 .per2,
@@ -136,13 +142,13 @@ a {
 
 .projects {
     display: flex;
-
 }
 
 .project {
     width: calc(100%/3);
     margin: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    padding: 20px;
 }
 
 
@@ -160,7 +166,6 @@ a {
 
 .GetInTouch {
     display: flex;
-    padding: 8%;
 }
 
 .Touch_col1 {
@@ -177,9 +182,108 @@ a {
     padding: 8%;
 }
 
+.Touch_col2>div,
+.Touch_col2>a,
+.Touch_col1>label {
+    margin: 10px;
+}
+
 .footer {
     background-color: #1e293b;
     color: white;
     text-align: center;
     padding: 40px 0;
+}
+
+a.social {
+    display: inline-flex;
+    /* חשוב */
+    justify-content: center;
+    /* יישור אופקי */
+    align-items: center;
+    /* יישור אנכי */
+
+    width: 45px;
+    height: 45px;
+
+    background-color: #0d6efd;
+    /* כחול כמו בדוגמה */
+    border-radius: 50%;
+    text-decoration: none;
+}
+
+a.social img {
+    width: 22px;
+    /* גודל האייקון */
+    height: 22px;
+}
+
+/* a.social {
+    display: inline-block;
+    background-color: #eee;
+    border-radius: 50%;
+    width: 25px;
+    padding: 10px;
+} */
+
+/* a.social svg {
+    display: block;
+    width: 100%;
+    fill: white;
+} */
+
+@media(max-width:600px) {
+
+    .full,
+    .projects,
+    .GetInTouch {
+        display: block;
+    }
+
+    .About {
+        display: block;
+        padding: 8%;
+        justify-content: space-between;
+    }
+
+    .About_col1,
+    .About_col2,
+    .full_col1,
+    .full_col2,
+    .project,
+    .Touch_col2 {
+        text-align: center;
+        margin: auto;
+        width: 90%;
+    }
+
+    .Touch_col1 {
+        margin: auto;
+        width: 100%;
+    }
+
+    .hamburger {
+        display: block;
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+    #menu-toggle {
+        display: none;
+    }
+
+    .menu {
+        display: none;
+        /* מוסתר כברירת מחדל */
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    /* כש-checkbox מסומן - מציגים את התפריט */
+    #menu-toggle:checked+label+.nav .menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
 }

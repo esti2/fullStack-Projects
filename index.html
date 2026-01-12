@@ -9,6 +9,10 @@
 </head>
 
 <body>
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="hamburger">
+        ☰
+    </label>
     <div class="nav">
         <nav class="name">Esti Mor</nav>
         <div class="menu">
@@ -25,9 +29,12 @@
         <div class="full_col1">
             <h1>Full-Stack Developer</h1>
             <div>I create beautiful and functional web experiences using modern technologies.
-                Passionate about clean code, intuitive design, and building user-focused solutions that make an impact.
+                Passionate about clean code, intuitive design, and building user-focused solutions that make an
+                impact.
             </div>
-            <button class="button">Get In Touch</button>
+            <br>
+            <a href="#Contact" class="button">Get In Touch</a>
+            <!-- <button class="button">Get In Touch</button> -->
         </div>
         <div class="full_col2">
             <img class="imgProfile"
@@ -45,7 +52,8 @@
                 With solid experience in HTML, CSS, and JavaScript, I turn ideas into clean, efficient, and scalable
                 code.
 
-                When I’m not coding, you’ll find me exploring new technologies, reading about design trends, or enjoying
+                When I’m not coding, you’ll find me exploring new technologies, reading about design trends, or
+                enjoying
                 a good cup of coffee while sketching out my next project idea.</div>
         </div>
         <div class="About_col2">
@@ -83,15 +91,40 @@
                 <img class="imgProject" src="https://www.משחקיםחינם.co.il/new_images/pacman-classic-353.webp">
                 <div class="descreptionProject">
                     <h3>Pacmen</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis in doloribus expedita at, dolores
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis in doloribus expedita at,
+                        dolores
                         dolore natus iste, est totam reprehenderit iure ex porro atque nemo, alias temporibus earum
                         aperiam.
                         Vitae!</p>
-                    <button class="viewProject">view project</button>
+                    <a href="https://esti2.github.io/PACMAN/" class="viewProject">view project</a>
                 </div>
             </div>
-            <div class="project"></div>
-            <div class="project"></div>
+            <div class="project">
+                <img class="imgProject"
+                    src="https://play-lh.googleusercontent.com/a4ynszVDzGGwvenNnqMYgT4FnAZYi84sGGEm3Nnb5G8mN9rad5BVchz62sSefaQ3J1bW=s256-rw">
+                <div class="descreptionProject">
+                    <h3>Game x 0</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis in doloribus expedita at,
+                        dolores
+                        dolore natus iste, est totam reprehenderit iure ex porro atque nemo, alias temporibus earum
+                        aperiam.
+                        Vitae!</p>
+                    <a href="https://esti2.github.io/GameX-O/" class="viewProject">view project</a>
+                </div>
+            </div>
+            <div class="project">
+                <img class="imgProject" src="https://cdn-icons-png.flaticon.com/256/8123/8123364.png">
+                <div class="descreptionProject">
+                    <h3>project</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis in doloribus expedita at,
+                        dolores
+                        dolore natus iste, est totam reprehenderit iure ex porro atque nemo, alias temporibus earum
+                        aperiam.
+                        Vitae!</p>
+                    <!-- <div class="viewProject"> view project</div> -->
+                    <a href="https://esti2.github.io/GameX-O/" class="viewProject">view project</a>
+                </div>
+            </div>
         </div>
     </div>
     <h2 id="Contact" class="title_center">Get In Touch</h2>
@@ -107,9 +140,26 @@
         </div>
         <div class="Touch_col2">
             <h3>Contact Information</h3>
-            <div>📧 estib9509@gmail.com</div>
-            <div>📱 054-230-1777</div>
+            <a href="mailto:someone@example.com">
+                <div>📧 estib9509@gmail.com</div>
+            </a>
+
+            <a href="tel:054-230-1777">
+                📱 054-230-1777
+            </a>
             <div>📍 Dimona, israel</div>
+
+
+            <a class="social" href="https://github.com/esti2">
+                <svg viewBox="0 0 48 48" width="22" height="22">
+                    <circle cx="24" cy="24" r="24" fill="#0d6efd" />
+                    <path fill="#fff" d="M24 12c-6.63 0-12 5.37-12 12 ..." />
+                </svg>
+            </a>
+
+            <!-- <a class="social" href="https://github.com/esti2">
+                <img src="github-circle.svg" alt="" srcset="">
+            </a> -->
         </div>
     </div>
     <footer class="footer">
