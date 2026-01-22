@@ -17,6 +17,14 @@ function handleChoice(choice) {
             console.log(`✓ ${word} not found in dictionary`);
 
     }
+    else if (choice.startsWith("complete")) {
+        const word = choice.slice(9).trim();
+        if (trie.predictWords(word))
+            console.log(`✓ ${word} exists in dictionary`);
+        else
+            console.log(`✓ ${word} not found in dictionary`);
+
+    }
     else if (choice === "exit") {
         return;
     }

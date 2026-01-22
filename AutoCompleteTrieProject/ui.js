@@ -13,7 +13,7 @@ function displayMenu() {
 function getMenuChoice() {
     const input = prompt('choose option ').trim();
 
-    if (input.startsWith("add") || input.startsWith("find") || input.startsWith("comlete") || input === "help" || input === "exit")
+    if (input.startsWith("add") || input.startsWith("find") || input.startsWith("complete") || input === "help" || input === "exit")
         return input;
     else
         return "input isn't currect";
