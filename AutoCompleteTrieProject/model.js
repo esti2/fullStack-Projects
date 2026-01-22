@@ -56,3 +56,7 @@ class AutoCompleteTrie {
 
 
 }
+
+module.exports = {
+    AutoCompleteTrie
+}
