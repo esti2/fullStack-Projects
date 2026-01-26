@@ -7,23 +7,23 @@ function handleChoice(choice) {
     if (choice.startsWith("add")) {
         const word = choice.slice(4).trim();
         trie.addWord(word);
-        console.log(`✓ Added word: ${word}`);
+        return `✓ Added word: ${word}`;
     }
     else if (choice.startsWith("find")) {
         const word = choice.slice(5).trim();
         if (trie.findWord(word))
-            console.log(`✓ ${word} exists in dictionary`);
+            return `✓ ${word} exists in dictionary`;
         else
-            console.log(`✓ ${word} not found in dictionary`);
+            return `✓ ${word} not found in dictionary`;
 
     }
     else if (choice.startsWith("complete")) {
         const word = choice.slice(9).trim();
-        if (trie.predictWords(word))
-            console.log(`✓ ${word} exists in dictionary`);
+        const myArr = trie.predictWords(word);
+        if (Array.isArray(myArr) && myArr.length > 0)
+            return `Suggestions for '${word}': ${myArr}`;
         else
-            console.log(`✓ ${word} not found in dictionary`);
-
+            return `✓ ${word} not found in trie`;
     }
     else if (choice === "exit") {
         return;
@@ -37,12 +37,17 @@ function run() {
 
     ui.displayMenu();
     let choice = "";
-    while (choice != "exit") {
+    let response = "";
+    while (choice !== "exit") {
         choice = ui.getMenuChoice();
-        handleChoice(choice);
+        if (!choice) {
+            ui.showErrorMessage("Invalid input. Please try again.");
+            continue;
+        }
+        response = handleChoice(choice);
+        if (response)
+            ui.showErrorMessage(response);
     }
-
-
 }
 
 run();

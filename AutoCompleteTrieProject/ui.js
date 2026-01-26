@@ -16,12 +16,12 @@ function getMenuChoice() {
     if (input.startsWith("add") || input.startsWith("find") || input.startsWith("complete") || input === "help" || input === "exit")
         return input;
     else
-        return "input isn't currect";
+        return null;
 }
 
 
 function showErrorMessage(message) {
-    console.log();
+    console.log(message);
 }
 
 

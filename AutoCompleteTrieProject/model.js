@@ -4,7 +4,7 @@ class AutoCompleteTrie {
         this.children = {};
         this.endOfWord = endOfWord;
     }
-    //let allWords = [];
+
 
     addWord(word) {
         let current = this;
@@ -40,65 +40,51 @@ class AutoCompleteTrie {
         return false;
     }
 
+
+
     predictWords(prefix) {
         let current = this;
 
         if (prefix.length === 0)
             return "not give prefix";
 
-        // for (let index = 0; index < prefix.length; index++) {
-        //     const char = prefix[index];
-        //     if (!current.children[char])
-        //         return allWords;
-        //     else
-
-        this._getRemainingTree(prefix, current);
-
-        // current = current.children[char];
-
-
-        if (index === prefix.length - 1 && current.endOfWord === true)
-            return true;
+        let node = this._getRemainingTree(prefix, current);
+        if (node) {
+            return this._allWordsHelper(prefix, node, [])
+        }
+        else
+            return "There are no words beginning with ";
     }
-
-
-
-
-
 
     //pravite
     _getRemainingTree(prefix, node) {
-
         for (let index = 0; index < prefix.length; index++) {
             const char = prefix[index];
             if (!node.children[char])
-                return;
-            else if (index === prefix.length - 1) {
-                node = node.children[char];
-                this._allWordsHelper(prefix, node, []);
-            }
-            else
-                //if (node.children[char] === char)
-                node = node.children[char];
-        }
+                return null;
 
+            else {
+                node = node.children[char]
+            }
+        }
+        return node;
     }
+
 
     _allWordsHelper(prefix, node, allWords) {
-        // myArr = [];
-        //let word = "";
 
-        node = node.children[char];
-        if (!node.endOfWord)
-            return allWords += this._allWordsHelper(prefix, node, allWords);
-        else
-            return allWords;
-
+        if (node.endOfWord) {
+            allWords.push(prefix);
+        }
+        for (const char in node.children) {
+            const childNode = node.children[char];
+            this._allWordsHelper(prefix + char, childNode, allWords);
+        }
+        return allWords;
     }
-
-
-
 }
+
+
 
 module.exports = {
     AutoCompleteTrie
