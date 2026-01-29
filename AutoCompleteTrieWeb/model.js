@@ -47,14 +47,14 @@ export class AutoCompleteTrie {
         let current = this;
 
         if (prefix.length === 0)
-            return "X not give prefix";
+            return [];
 
         let node = this._getRemainingTree(prefix, current);
         if (node) {
             return this._allWordsHelper(prefix, node, [])
         }
         else
-            return "X There are no words beginning with ";
+            return [];
     }
 
     //pravite

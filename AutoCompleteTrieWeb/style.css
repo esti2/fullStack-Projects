@@ -6,13 +6,15 @@
 }
 
 .fail {
-    background-color: rgb(194, 116, 116);
-    color: red;
+    background-color: #fed7d7;
+    color: #752b2c;
+    border-color: #fc9796;
 }
 
 .success {
-    background-color: aquamarine;
-    color: green;
+    background-color: rgb(198, 246, 213);
+    color: rgb(34, 85, 62);
+    border-color: rgb(167, 234, 190);
 
 }
 
@@ -20,4 +22,11 @@ input {
     border-radius: 5px solid gray;
     margin: 10px;
     width: 200px;
+}
+
+#countWords {
+    background-color: #f8fafc;
+    width: 200px;
+    text-align: center;
+    margin: 10px;
 }
