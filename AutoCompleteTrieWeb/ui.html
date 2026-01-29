@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script type="module" src="controller.js" defer></script>
+    <script type="module" src="model.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <form>
+        <input type="text" id="text" placeholder="Enter a word to add to dictionary"></input>
+        <button id="button" type="button">Add Word</button>
+        <br>
+        <input type="text" id="result"></input>
+        <br>
+        <input type="text" id="complete" placeholder="Start typing to see suggestions..."></input>
+        <ul id="suggestions"></ul>
+        <div id="countWords"></div>
+
+    </form>
+</body>
+
+</html>
