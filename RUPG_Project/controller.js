@@ -1,4 +1,12 @@
 import { model } from "./model.js"
 import { view } from "./view.js"
 
-const users = model.getUsers();
+
+async function init() {
+    const users = await model.getUsers();
+    view.showMainUser(users);
+    const quotes = await model.getQuotesKanye();
+    view.showQuoteKanye(quotes);
+}
+
+init()

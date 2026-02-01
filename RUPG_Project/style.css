@@ -4,3 +4,13 @@ button {
     border-color: aquamarine;
     border-radius: 5px;
 }
+
+#flexUser {
+    display: flex;
+    flex-direction: row;
+}
+
+#friends {
+    display: flex;
+    flex-direction: column;
+}
