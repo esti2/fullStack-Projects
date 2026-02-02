@@ -18,7 +18,31 @@ export const model = {
         const dataKanye = await kanye.json();
         const result = dataKanye.quote;
         return result;
-    }
+    },
+
+    async getPokemon() {
+        const pokemon = await fetch('https://pokeapi.co/docs/v2');
+        if (!pokemon.ok)
+            throw new Error("pokemon not found");
+
+        const dataPokemon = await pokemon.json();
+        const result = dataPokemon;
+        return result;
+    },
+
+    async getBaconIpsum() {
+        const baconIpsum = await fetch('https://baconipsum.com/api/?type=meat-and-filler');
+        if (!baconIpsum.ok)
+            throw new Error("pokemon not found");
+
+        const dataBaconIpsum = await baconIpsum.json();
+        const result = dataBaconIpsum;
+        return result;
+    },
+
+
+
+
 
 
 };

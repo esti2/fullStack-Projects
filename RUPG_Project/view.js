@@ -18,8 +18,17 @@ export const view = {
     showQuoteKanye(quoteRandom) {
         let quote = document.getElementById("quotes");
         quote.innerHTML = quoteRandom;
+    },
+
+    showPokemon(pokemon) {
+        let pokemonRandom = document.getElementById("pokemon");
+        quote.innerHTML = pokemonRandom;
+    },
 
 
+    showAbout(baconIpsum) {
+        let about = document.getElementById("about");
+        about.innerHTML = baconIpsum;
     }
 
 };
