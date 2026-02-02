@@ -3,16 +3,26 @@ import { view } from "./view.js"
 
 
 async function init() {
-    const users = await model.getUsers();
+    const [users, quotes, pokemon, baconIpsum] = await Promise.all([
+        model.getUsers(),
+        model.getQuotesKanye(),
+        model.getPokemon(),
+        model.getBaconIpsum()
+    ]);
+
     view.showMainUser(users);
-    const quotes = await model.getQuotesKanye();
     view.showQuoteKanye(quotes);
-    const pokemon = await model.getPokemon();
     view.showPokemon(pokemon);
-    const baconIpsum = await model.getBaconIpsum();
     view.showAbout(baconIpsum);
 
 
-}
+    return { users, quotes, pokemon, baconIpsum };
 
+
+
+}
 init()
+
+
+
+
