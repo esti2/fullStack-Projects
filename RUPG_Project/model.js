@@ -21,12 +21,13 @@ export const model = {
     },
 
     async getPokemon() {
-        const pokemon = await fetch('https://pokeapi.co/api/v2/pokemon/');
+        const randomNumber = Math.floor(Math.random() * 1250) + 1;
+        const pokemon = await fetch(`https://pokeapi.co/api/v2/pokemon/${randomNumber}/`);
         if (!pokemon.ok)
             throw new Error("pokemon not found");
 
         const dataPokemon = await pokemon.json();
-        const result = dataPokemon.results[0].name;
+        const result = dataPokemon;
         return result;
     },
 

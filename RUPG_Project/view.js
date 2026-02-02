@@ -23,7 +23,10 @@ export const view = {
 
     showPokemon(pokemon) {
         let pokemonRandom = document.getElementById("pokemon");
-        pokemonRandom.innerHTML = pokemon;
+        pokemonRandom.innerHTML = pokemon.name;
+        let img = document.getElementById("pokemonImg");
+
+        img.src = pokemon.sprites.front_default;
     },
 
 
