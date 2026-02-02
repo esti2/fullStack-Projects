@@ -14,11 +14,15 @@ async function init() {
     view.showQuoteKanye(quotes);
     view.showPokemon(pokemon);
     view.showAbout(baconIpsum);
-
+    // view.init(init);
 
     return { users, quotes, pokemon, baconIpsum };
 
 }
+
+const generateBtn = document.getElementById("generate");
+generateBtn.addEventListener("click", init);
+
 init()
 
 

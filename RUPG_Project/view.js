@@ -1,6 +1,5 @@
 export const view = {
     showMainUser(user) {
-
         let userMain = document.getElementById("userMain");
         userMain.innerHTML = user[0].name.first + " " + user[0].name.last;
         let img = document.getElementById("img");
@@ -8,11 +7,8 @@ export const view = {
         let cityState = document.getElementById("cityState");
         cityState.innerHTML = user[0].location.city + " " + user[0].location.state;
         let friends = document.getElementById("friends");
-        const friendsName = user.map(u => u.name.first + u.name.last + "<br>");
-        // const friendsNameFix = friendsName.replace(",", "");
-        friends.innerHTML = "Friends" + friendsName;
-
-
+        const friendsName = user.map(u => u.name.first + u.name.last);
+        friends.innerHTML = "<h3>Friends</h3><div>" + friendsName.join("<div/><br>");
     },
 
 
@@ -25,7 +21,6 @@ export const view = {
         let pokemonRandom = document.getElementById("pokemon");
         pokemonRandom.innerHTML = pokemon.name;
         let img = document.getElementById("pokemonImg");
-
         img.src = pokemon.sprites.front_default;
     },
 
@@ -33,6 +28,5 @@ export const view = {
     showAbout(baconIpsum) {
         let about = document.getElementById("about");
         about.innerHTML = baconIpsum;
-    }
-
+    },
 };

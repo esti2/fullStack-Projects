@@ -6,10 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
-
-    <script type="module" src="model.js"></script>
-    <script type="module" src="controller.js"></script>
-    <script type="module" src="view.js"></script>
 </head>
 
 <body>
@@ -24,25 +20,20 @@
         <div id="left">
             <h3>favorite quote:</h3>
             <div id="quotes"></div>
-
-
             <h3>favorite pokemon:</h3>
             <div id="pokemon"></div>
             <img id="pokemonImg">
             <hr>
-            <h3>About me</h3>
             <div id="about"></div>
-            <button>Generate User</button>
+            <button id="generate">Generate User</button>
         </div>
         <div id="right">
-            <h3>Friends</h3>
             <div id="friends"></div>
         </div>
-
     </div>
-
-
-
+    <script type="module" src="view.js"></script>
+    <script type="module" src="model.js"></script>
+    <script type="module" src="controller.js"></script>
 </body>
 
 </html>

@@ -21,7 +21,7 @@ export const model = {
     },
 
     async getPokemon() {
-        const randomNumber = Math.floor(Math.random() * 1250) + 1;
+        const randomNumber = Math.floor(Math.random() * (1025)) + 1;
         const pokemon = await fetch(`https://pokeapi.co/api/v2/pokemon/${randomNumber}/`);
         if (!pokemon.ok)
             throw new Error("pokemon not found");
@@ -34,7 +34,7 @@ export const model = {
     async getBaconIpsum() {
         const baconIpsum = await fetch('https://baconipsum.com/api/?type=meat-and-filler');
         if (!baconIpsum.ok)
-            throw new Error("pokemon not found");
+            throw new Error("BaconIpsum not found");
 
         const dataBaconIpsum = await baconIpsum.json();
         const result = dataBaconIpsum;
