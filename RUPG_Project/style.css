@@ -1,16 +1,48 @@
 button {
-    background-color: aquamarine;
+    background-color: rgb(25, 27, 26);
     color: white;
-    border-color: aquamarine;
+    border-color: rgb(25, 27, 26);
     border-radius: 5px;
 }
 
 #flexUser {
-    display: flex;
-    flex-direction: row;
+    justify-items: center;
+
+    /* display: flex;
+    flex-direction: row; */
 }
 
 #friends {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+}
+
+#down {
+    display: flex;
+    flex-direction: row;
+}
+
+#top {
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: row;
+}
+
+img {
+    width: 12%;
+    height: 12%;
+    border-radius: 50%;
+    margin: 5px;
+}
+
+#right {
+    width: 20%;
+
+}
+
+
+#left {
+    width: 75%;
+
 }

@@ -7,8 +7,8 @@ async function init() {
     view.showMainUser(users);
     const quotes = await model.getQuotesKanye();
     view.showQuoteKanye(quotes);
-    //const pokemon = await model.getPokemon();
-    //view.showPokemon(pokemon);
+    const pokemon = await model.getPokemon();
+    view.showPokemon(pokemon);
     const baconIpsum = await model.getBaconIpsum();
     view.showAbout(baconIpsum);
 

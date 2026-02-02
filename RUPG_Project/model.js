@@ -21,12 +21,12 @@ export const model = {
     },
 
     async getPokemon() {
-        const pokemon = await fetch('https://pokeapi.co/docs/v2');
+        const pokemon = await fetch('https://pokeapi.co/api/v2/pokemon/');
         if (!pokemon.ok)
             throw new Error("pokemon not found");
 
         const dataPokemon = await pokemon.json();
-        const result = dataPokemon;
+        const result = dataPokemon.results[0].name;
         return result;
     },
 
