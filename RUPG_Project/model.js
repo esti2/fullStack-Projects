@@ -40,15 +40,4 @@ export const model = {
         const result = dataBaconIpsum;
         return result;
     },
-
-
-
-
-
-
 };
-
-
-
-
-//console.log('model loaded');
