@@ -18,8 +18,6 @@ async function init() {
 
     return { users, quotes, pokemon, baconIpsum };
 
-
-
 }
 init()
 
