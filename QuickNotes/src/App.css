@@ -1,0 +1,6 @@
+body {
+  background-color: #e8f4f8;
+  background-image:
+    radial-gradient(circle, #bbb 1px, transparent 1px);
+  background-size: 20px 20px;
+}

@@ -1,0 +1,22 @@
+.note {
+    border: 2px solid grey;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 6px;
+    cursor: pointer;
+}
+
+.date {
+    color: gray;
+    margin-right: 5px;
+}
+
+.dateAndButton {
+    display: flex;
+
+}
+
+.update {
+    display: flex;
+    flex-direction: column;
+}
